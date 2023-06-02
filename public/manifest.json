@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Langbitou",
   "version": "0.1.0",
-  "description": "My Chrome Extension",
+  "description": "Langbitou is a tool to highlight texts on webpages and save them locally",
   "icons": {
     "16": "icons/icon_16.png",
     "32": "icons/icon_32.png",
@@ -17,8 +17,9 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "storage"
+    "activeTab", "scripting", "storage", "tabs", "webNavigation"
   ],
+  "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
       "matches": [
@@ -29,5 +30,14 @@
         "contentScript.js"
       ]
     }
-  ]
+  ],
+  "commands": {
+    "highlightTexts": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+0"
+      },
+      "description": "highlight selected text",
+      "global": true
+    }
+  }
 }
