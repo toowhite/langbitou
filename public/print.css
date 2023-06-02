@@ -1,0 +1,9 @@
+@media print {
+  * {
+    transition: none !important;
+  }
+
+  span.langbitou-highlighted {
+    background-color: yellow !important;
+  }
+}

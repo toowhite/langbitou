@@ -26,6 +26,7 @@
         "<all_urls>"
       ],
       "run_at": "document_idle",
+      "css": ["print.css"],
       "js": [
         "contentScript.js"
       ]

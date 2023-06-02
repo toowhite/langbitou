@@ -24,11 +24,11 @@ async function setSelectedTextBackgroundColor(tabUrl) {
   console.debug(tabUrl);
 
   const span = document.createElement("span");
-  span.style.backgroundColor = "rgba(144, 238, 144)"; // Set background color to yellow
+  span.style.backgroundColor = "chartreuse"; // Set background color to yellow
   // span.style.padding = "0.2em"; // Add padding for a marker-like effect
   span.style.borderRadius = "0.2em"; // Add rounded corners for a marker-like effect
-  span.style.boxShadow = "0 0 2px 2px rgba(144, 238, 144, 0.8)"; // Add a subtle shadow
-  span.style.textDecoration = "underline";
+  span.style.boxShadow = "0 0 2px 2px chartreuse"; // Add a subtle shadow
+  span.className = "langbitou-highlighted";
 
   const range = window.getSelection().getRangeAt(0);
   var selectionContents = range.extractContents();
