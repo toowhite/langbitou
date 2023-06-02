@@ -28,6 +28,7 @@ async function setSelectedTextBackgroundColor(tabUrl) {
   // span.style.padding = "0.2em"; // Add padding for a marker-like effect
   span.style.borderRadius = "0.2em"; // Add rounded corners for a marker-like effect
   span.style.boxShadow = "0 0 2px 2px rgba(144, 238, 144, 0.8)"; // Add a subtle shadow
+  span.style.textDecoration = "underline";
 
   const range = window.getSelection().getRangeAt(0);
   var selectionContents = range.extractContents();
