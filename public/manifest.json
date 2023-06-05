@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Langbitou",
   "version": "0.1.0",
-  "description": "Langbitou is a tool to highlight texts on webpages and save them locally",
+  "description": "Langbitou is a tool that simply highlight your selected texts on the webpage. The highlights are saved in your local storage and never send through the Internet.",
   "icons": {
     "16": "icons/icon_16.png",
     "32": "icons/icon_32.png",
