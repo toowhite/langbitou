@@ -4,8 +4,7 @@ Langbitou
 
 ## Features
 
-- Feature 1
-- Feature 2
+- Langbitou is a tool that simply highlight your selected texts on the webpage. The highlights are saved in your local storage and never send through the Internet.
 
 ## Install
 
