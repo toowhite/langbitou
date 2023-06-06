@@ -1,5 +1,7 @@
 'use strict';
 
+import "./print.css"
+
 async function setSelectedTextBackgroundColor() {
   const url = location.href;
 
