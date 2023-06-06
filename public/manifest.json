@@ -17,9 +17,8 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "activeTab", "scripting", "storage", "tabs", "webNavigation"
+    "activeTab", "storage", "tabs"
   ],
-  "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
       "matches": [
@@ -33,12 +32,11 @@
     }
   ],
   "commands": {
-    "highlightTexts": {
+    "HIGHLIGHT_TEXTS": {
       "suggested_key": {
         "default": "Ctrl+Shift+0"
       },
-      "description": "highlight selected text",
-      "global": true
+      "description": "highlight selected text"
     }
   }
 }
