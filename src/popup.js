@@ -1,7 +1,24 @@
 'use strict';
 
-import './popup.css';
+import "./popup.css"
 
-(function () {
+(async () => {
+  const [tab] = await chrome.tabs.query({
+    active: true,
+    currentWindow: true,
+  });
+  const highlights = await chrome.storage.local.get(tab.url);
 
+  const btnClear = document.getElementById("btnClear");
+  btnClear.addEventListener("click", (element, event) => {
+    chrome.storage.local.remove(tab.url);
+    window.close();
+  });
+
+  const ol = document.getElementById("highlights-texts");
+  for (const highlight of highlights[tab.url]) {
+    const li = document.createElement("li");
+    li.innerText = highlight.trim();
+    ol.appendChild(li);
+  }
 })();

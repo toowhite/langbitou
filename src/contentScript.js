@@ -2,7 +2,7 @@
 
 import "./print.css"
 
-async function setSelectedTextBackgroundColor() {
+ const setSelectedTextBackgroundColor = async () => {
   const url = location.href;
 
   const span = document.createElement("span");
@@ -42,5 +42,16 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 (async () => {
   const highlights = await chrome.storage.local.get(location.href);
-  console.debug(highlights);
+  if (highlights[location.href]) {
+    // alert("You have visited this page before.");
+    const readMark = document.createElement("img");
+    readMark.src = chrome.runtime.getURL("icons/paper-clips.png");
+    readMark.style.position = "absolute";
+    readMark.title = "click here to load previous highlights";
+    readMark.style.top = "0";
+    readMark.style.right = "0";
+    readMark.style.cursor = "pointer";
+
+    document.body.appendChild(readMark);
+  }
 })();
