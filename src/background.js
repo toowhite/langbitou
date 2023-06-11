@@ -8,7 +8,24 @@ chrome.commands.onCommand.addListener(async (command) => {
       currentWindow: true,
     });
     chrome.tabs.sendMessage(tab.id, {
-      command: command,
+      command: 'HIGHLIGHT_TEXTS',
+    });
+  }
+});
+
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.contextMenus.create({
+    id: "ctmHighlight",
+    title: "Highlight",
+    contexts: ["selection"]
+  });
+});
+
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+  // console.debug(tab);
+  if (info.menuItemId === "ctmHighlight") {
+    chrome.tabs.sendMessage(tab.id, {
+      command: "HIGHLIGHT_TEXTS",
     });
   }
 });
