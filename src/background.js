@@ -29,3 +29,8 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     });
   }
 });
+
+// https://stackoverflow.com/questions/66618136/persistent-service-worker-in-chrome-extension/66618269#66618269
+const keepAlive = () => setInterval(chrome.runtime.getPlatformInfo, 20e3);
+chrome.runtime.onStartup.addListener(keepAlive);
+keepAlive();
