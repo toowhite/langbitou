@@ -9,6 +9,7 @@ const setSelectedTextBackgroundColor = async () => {
   span.style.backgroundColor = "rgba(255,209,0,0.4)"; // Set background color to yellow
   span.style.borderRadius = "1em"; // Add rounded corners for a marker-like effect
   span.style.boxShadow = "0 0 2px 2px rgba(255,209,0,0.4)"; // Add a subtle shadow
+  span.style.cursor = "pointer"; // Make the cursor more noticeable
   span.className = "langbitou-highlighted";
 
   const range = window.getSelection().getRangeAt(0);
@@ -25,6 +26,8 @@ const setSelectedTextBackgroundColor = async () => {
   chrome.storage.local.set({
     [url]: curHighlights[url]
   });
+
+  window.getSelection().removeAllRanges();
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
