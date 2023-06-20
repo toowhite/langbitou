@@ -6,15 +6,13 @@ const setSelectedTextBackgroundColor = async () => {
   const url = location.href;
 
   const span = document.createElement("span");
-  span.style.backgroundColor = "chartreuse"; // Set background color to yellow
-  // span.style.padding = "0.2em"; // Add padding for a marker-like effect
-  span.style.borderRadius = "0.2em"; // Add rounded corners for a marker-like effect
-  span.style.boxShadow = "0 0 2px 2px chartreuse"; // Add a subtle shadow
+  span.style.backgroundColor = "rgba(255,209,0,0.4)"; // Set background color to yellow
+  span.style.borderRadius = "1em"; // Add rounded corners for a marker-like effect
+  span.style.boxShadow = "0 0 2px 2px rgba(255,209,0,0.4)"; // Add a subtle shadow
   span.className = "langbitou-highlighted";
 
   const range = window.getSelection().getRangeAt(0);
-  var selectionContents = range.extractContents();
-  const toBeHighlighted = selectionContents.textContent;
+  const toBeHighlighted = range.extractContents().textContent;
   span.innerText = toBeHighlighted;
   range.insertNode(span);
   
