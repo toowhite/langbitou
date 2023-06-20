@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Langbitou",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Langbitou simply highlight your selected texts on the webpage. Data is saved locally to ensure your absolute control.",
   "icons": {
     "16": "icons/icon_16.png",
