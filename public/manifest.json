@@ -29,7 +29,8 @@
       "suggested_key": {
         "default": "Ctrl+Shift+0"
       },
-      "description": "highlight selected text"
+      "description": "highlight selected text",
+      "global": true
     }
   }
 }
