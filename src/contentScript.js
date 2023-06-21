@@ -12,7 +12,25 @@ const setSelectedTextBackgroundColor = async () => {
   span.style.cursor = "pointer"; // Make the cursor more noticeable
   span.className = "langbitou-highlighted";
 
-  const range = window.getSelection().getRangeAt(0);
+  let range;
+  let selection = window.getSelection();
+  if (selection.rangeCount > 0) {
+    range = selection.getRangeAt(0);
+  }
+  else {
+    const iframes = document.getElementsByTagName('iframe');
+    for (let iframe of iframes) {
+      const idoc = iframe.contentDocument;
+      selection = idoc.getSelection();
+      if (selection.rangeCount > 0) {
+        range = selection.getRangeAt(0);
+        break;
+      }
+    }
+  }
+  console.debug(selection);
+  console.debug(range);
+
   const toBeHighlighted = range.extractContents().textContent;
   span.innerText = toBeHighlighted;
   range.insertNode(span);
