@@ -1,0 +1,5 @@
+# Changelog
+Since v0.1.2, all notable changes to this project will be documented in this file.
+
+## v0.1.2 - 6/21/2023
+- Fix cannot highlight in iframes. 

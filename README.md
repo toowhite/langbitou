@@ -1,22 +1,20 @@
 # <img src="public/icons/icon_48.png" width="45" align="left"> Langbitou
 
-Langbitou
-
+Langbitou is a tool that simply highlight your selected texts on the webpage. The highlights are saved in your local storage and never send through the Internet.
 ## Features
+- Highlight texts on webpage with
+  - Shortcut key (by default CTRL+SHIFT+0)
+  - Context menu 
+  - Page UI (todo)
 
-- Langbitou is a tool that simply highlight your selected texts on the webpage. The highlights are saved in your local storage and never send through the Internet.
 
 ## Install
 
-[**Chrome** extension]() <!-- TODO: Add chrome extension link inside parenthesis -->
+[**Chrome** extension](https://chrome.google.com/webstore/detail/langbitou/fjamiehmhhaikkndgmgjdamjegfafmdn)
 
-## Contribution
+## [License](./LICENSE)
 
-Suggestions and pull requests are welcomed!.
-
-## License
-
-[MIT License](./LICENSE)
+## [Changelog](./CHANGELOG)
 
 ---
 
